@@ -9,7 +9,7 @@ type LinkProps = RegularLinkProps | (Omit<RegularLinkProps, 'href'> & { href: Pa
 
 const Link: React.FC<LinkProps> = (props) => {
     const { children, href: hrefArgument, ...other } = props;
-    let hrefString: string = null;
+    let hrefString: string = '';
     let hrefContent: ContentObject = null;
 
     if (typeof hrefArgument === 'string') {
